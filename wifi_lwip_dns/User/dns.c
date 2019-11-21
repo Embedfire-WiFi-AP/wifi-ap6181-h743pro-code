@@ -50,6 +50,7 @@
 
 /*-----------------------------------------------------------------------------------*/
 char *recvbuf;
+extern char wiced_if_str[100];
 static void 
 dns_thread(void *arg)
 {
@@ -76,8 +77,8 @@ dns_thread(void *arg)
   LWIP_ERROR("tcpecho: invalid conn", (conn != NULL), return;);
   
   PRINTF("请在电脑上位机软件中将电脑设置为client，连接到开发板上...\n\n");
-  PRINTF("请将电脑上位机设置为TCP Client.并且连接到开发板,开发板IP地址是:%d.%d.%d.%d \t 端口号:%d\n\n",\
-          IP_ADDR0,IP_ADDR1,IP_ADDR2,IP_ADDR3,LOCAL_PORT);
+  PRINTF("请将电脑上位机设置为TCP Client.并且连接到开发板,开发板IP地址是:%s \t 端口号:%d\n\n",\
+          wiced_if_str,LOCAL_PORT);
   PRINTF("可以使用   -> mqtt.heclouds.com <- 域名进行测试...\n\n");
 	
   /* Tell connection to go into listening mode. */
