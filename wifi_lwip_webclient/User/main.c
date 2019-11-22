@@ -18,6 +18,7 @@
 #include "./usart/bsp_debug_usart.h"
 
 #include "platform_init.h"
+#include "./mpu/bsp_mpu.h"
 
 /** @endcond */
 
@@ -134,6 +135,8 @@ static void BSP_Init(void)
 	
   /* 初始化SysTick */
   HAL_SYSTICK_Config( HAL_RCC_GetSysClockFreq() / configTICK_RATE_HZ );	
+		
+	/* 启动SysTick */
 
 	/* usart 端口初始化 */
   DEBUG_USART_Config();
