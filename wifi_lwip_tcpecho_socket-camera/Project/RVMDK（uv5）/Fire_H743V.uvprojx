@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H743xx ,WICED_PLATFORM_MASKS_BUS_IRQ ,STM32H7</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\ver9.0.0\Source\include;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\ver9.0.0\Source;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\ver9.0.0\Source\portable\RVDS\ARM_CM7\r0p1;..\..\..\WiFi_SDk\WICED\network\LwIP\ver2.0.3\port;..\..\..\WiFi_SDk\WICED\network\LwIP\ver2.0.3\src;..\..\..\WiFi_SDk\WICED\network\LwIP\ver2.0.3\src\include;..\..\lwip\contrib\apps;..\..\..\WiFi_SDk\include;..\..\..\WiFi_SDk\libraries\utilities\linked_list;..\..\..\WiFi_SDk\libraries\utilities\TLV;..\..\..\WiFi_SDk\resources\firmware\43362;..\..\..\WiFi_SDk\WICED\internal\unit;..\..\..\WiFi_SDk\WICED\internal;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD\FreeRTOS;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD\FreeRTOS\arch;..\..\..\WiFi_SDk\WICED\platform\include;..\..\..\WiFi_SDk\WICED\platform\MCU\STM32H7xx;..\..\..\WiFi_SDk\WICED\platform\MCU\STM32H7xx\peripherals;..\..\..\WiFi_SDk\WICED\platform\MCU\STM32H7xx\WWD;..\..\..\WiFi_SDk\WICED\WWD\include;..\..\..\WiFi_SDk\WICED\WWD\include\network;..\..\..\WiFi_SDk\WICED\WWD\include\platform;..\..\..\WiFi_SDk\WICED\WWD\include\RTOS;..\..\..\WiFi_SDk\WICED\WWD;..\..\..\WiFi_SDk\WICED\WWD\internal\bus_protocols;..\..\..\WiFi_SDk\WICED\WWD\internal\bus_protocols\SDIO;..\..\..\WiFi_SDk\WICED\WWD\internal\chips\43362;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\WWD;..\..\..\WiFi_SDk\WICED\WWD\internal;..\..\..\WiFi_SDk\WICED\platform\GCC;..\..\..\WiFi_SDk\WICED\security\BESL\crypto_internal;..\..\..\WiFi_SDk\WICED\security\BESL\mbedtls_open\include;..\..\..\WiFi_SDk\WICED\security\BESL\include;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\WICED;..\..\..\WiFi_SDk\WICED\platform\MCU;..\..\..\WiFi_SDk\libraries\utilities\ring_buffer;..\..\..\WiFi_SDK\WICED\RTOS\FreeRTOS\WWD\ARM_CM7;..\..\..\WiFi_SDk\WICED\network\LwIP\WICED;..\..\..\WiFi_SDk\WICED\security\BESL\host\WICED;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD\FreeRTOS\arch;..\..\..\WiFi_SDk\WICED\security\PostgreSQL\include;..\..\..\WiFi_SDK\libraries\inputs\gpio_button;..\..\..\WiFi_SDK\WICED\platform\ARM_CM7;..\..\..\WiFi_SDK\libraries\drivers\stm32_hal_peripherals\gpio</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\ver9.0.0\Source\include;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\ver9.0.0\Source;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\ver9.0.0\Source\portable\RVDS\ARM_CM7\r0p1;..\..\..\WiFi_SDk\WICED\network\LwIP\ver2.0.3\port;..\..\..\WiFi_SDk\WICED\network\LwIP\ver2.0.3\src;..\..\..\WiFi_SDk\WICED\network\LwIP\ver2.0.3\src\include;..\..\lwip\contrib\apps;..\..\..\WiFi_SDk\include;..\..\..\WiFi_SDk\libraries\utilities\linked_list;..\..\..\WiFi_SDk\libraries\utilities\TLV;..\..\..\WiFi_SDk\resources\firmware\43362;..\..\..\WiFi_SDk\WICED\internal\unit;..\..\..\WiFi_SDk\WICED\internal;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD\FreeRTOS;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD\FreeRTOS\arch;..\..\..\WiFi_SDk\WICED\platform\include;..\..\..\WiFi_SDk\WICED\platform\MCU\STM32H7xx;..\..\..\WiFi_SDk\WICED\platform\MCU\STM32H7xx\peripherals;..\..\..\WiFi_SDk\WICED\platform\MCU\STM32H7xx\WWD;..\..\..\WiFi_SDk\WICED\WWD\include;..\..\..\WiFi_SDk\WICED\WWD\include\network;..\..\..\WiFi_SDk\WICED\WWD\include\platform;..\..\..\WiFi_SDk\WICED\WWD\include\RTOS;..\..\..\WiFi_SDk\WICED\WWD;..\..\..\WiFi_SDk\WICED\WWD\internal\bus_protocols;..\..\..\WiFi_SDk\WICED\WWD\internal\bus_protocols\SDIO;..\..\..\WiFi_SDk\WICED\WWD\internal\chips\43362;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\WWD;..\..\..\WiFi_SDk\WICED\WWD\internal;..\..\..\WiFi_SDk\WICED\platform\GCC;..\..\..\WiFi_SDk\WICED\security\BESL\crypto_internal;..\..\..\WiFi_SDk\WICED\security\BESL\mbedtls_open\include;..\..\..\WiFi_SDk\WICED\security\BESL\include;..\..\..\WiFi_SDk\WICED\RTOS\FreeRTOS\WICED;..\..\..\WiFi_SDk\WICED\platform\MCU;..\..\..\WiFi_SDk\libraries\utilities\ring_buffer;..\..\..\WiFi_SDK\WICED\RTOS\FreeRTOS\WWD\ARM_CM7;..\..\..\WiFi_SDk\WICED\network\LwIP\WICED;..\..\..\WiFi_SDk\WICED\security\BESL\host\WICED;..\..\..\WiFi_SDk\WICED\network\LwIP\WWD\FreeRTOS\arch;..\..\..\WiFi_SDk\WICED\security\PostgreSQL\include;..\..\..\WiFi_SDK\libraries\inputs\gpio_button;..\..\..\WiFi_SDK\WICED\platform\ARM_CM7;..\..\..\WiFi_SDK\libraries\drivers\stm32_hal_peripherals\gpio;..\..\User\cm_backtrace\fault_handler\keil;..\..\User\cm_backtrace</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -360,7 +360,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -369,7 +369,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>..\..\User\Fire_H7.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -983,9 +983,39 @@
               <FilePath>..\..\User\FreeRTOSConfig.h</FilePath>
             </File>
             <File>
-              <FileName>tcpecho.c</FileName>
+              <FileName>bsp_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\tcpecho.c</FilePath>
+              <FilePath>..\..\User\i2c\bsp_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\sdram\bsp_sdram.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Cammera</GroupName>
+          <Files>
+            <File>
+              <FileName>camera_data_queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\camera_data_queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>tcp_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\tcp_server.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_ov2640.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\camera\bsp_ov2640.c</FilePath>
+            </File>
+            <File>
+              <FileName>cammera_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\cammera_middleware.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2131,6 +2161,21 @@
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\WiFi_SDK\libraries\drivers\stm32_hal_peripherals\gpio\gpio.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Cmbacktrace</GroupName>
+          <Files>
+            <File>
+              <FileName>cm_backtrace.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\cm_backtrace\cm_backtrace.c</FilePath>
+            </File>
+            <File>
+              <FileName>cmb_fault.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\User\cm_backtrace\fault_handler\keil\cmb_fault.S</FilePath>
             </File>
           </Files>
         </Group>

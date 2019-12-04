@@ -30,9 +30,9 @@
  *
  */
 
-#ifndef LWIP_TCPECHO_H
-#define LWIP_TCPECHO_H
+#ifndef _CLIENT_H
+#define _CLIENT_H
 
-void tcpecho_init(void);
+void client_init(void);
 
-#endif /* LWIP_TCPECHO_H */
+#endif /* _CLIENT_H */

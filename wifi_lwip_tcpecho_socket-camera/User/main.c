@@ -6,18 +6,17 @@
 #include "platform/wwd_platform_interface.h"
 #include "RTOS/wwd_rtos_interface.h"
 #include "wwd_buffer_interface.h"
-
-
 #include "wifi_base_config.h"
-
-/* FreeRTOS头文件 */
 #include "FreeRTOS.h"
 #include "task.h"
-/* 开发板硬件bsp头文件 */
-
 #include "./usart/bsp_debug_usart.h"
-
 #include "platform_init.h"
+#include <cm_backtrace.h>
+#include "./i2c/bsp_i2c.h"
+#include "./camera/bsp_ov2640.h"
+/** @endcond */
+#define HARDWARE_VERSION               "V1.0.0"
+#define SOFTWARE_VERSION               "V0.1.0"
 
 /** @endcond */
 
@@ -42,8 +41,10 @@ void BSP_Init();
 
 int main( void )
 {
+	
 		BSP_Init();
 
+	
     /*创建一个初始线程 */									
 		BaseType_t xReturn = pdPASS;
 		xReturn = xTaskCreate((TaskFunction_t )startup_thread,  /* 任务入口函数 */
@@ -137,6 +138,8 @@ static void BSP_Init(void)
 
 	/* usart 端口初始化 */
   DEBUG_USART_Config();
+	/* CmBacktrace initialize */
+  cm_backtrace_init("Fire_H7", HARDWARE_VERSION, SOFTWARE_VERSION);
 
 
   
