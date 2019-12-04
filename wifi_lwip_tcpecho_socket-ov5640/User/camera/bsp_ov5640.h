@@ -67,7 +67,14 @@ typedef enum
 		JPEG_2592x1944        =   0x09,     /* JPEG Image 2592*1944 Size */
 }ImageFormat_TypeDef;
 
+//#define JPEG_IMAGE_FORMAT 		JPEG_160x120
 #define JPEG_IMAGE_FORMAT 		JPEG_320x240
+//#define JPEG_IMAGE_FORMAT 		JPEG_640x480
+//#define JPEG_IMAGE_FORMAT 		JPEG_800x600
+//#define JPEG_IMAGE_FORMAT 		JPEG_1024x768
+
+
+
 extern void OV5640_JPEGConfig(ImageFormat_TypeDef ImageFormat);
 
 /*ÉãÏñÍ·½Ó¿Ú */

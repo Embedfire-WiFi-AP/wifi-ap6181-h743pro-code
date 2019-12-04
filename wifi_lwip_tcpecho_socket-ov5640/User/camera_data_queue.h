@@ -9,8 +9,10 @@
 */
 
 
-#define CAMERA_QUEUE_NUM        (1)               //缓冲队列的大小
-#define CAMERA_QUEUE_DATA_LEN   (1024 * 256)       //单帧图片的缓冲区大小
+//#define CAMERA_QUEUE_NUM        (1)               //缓冲队列的大小
+//#define CAMERA_QUEUE_DATA_LEN   (1024 * 256)       //单帧图片的缓冲区大小
+#define CAMERA_QUEUE_NUM        (8)               //缓冲队列的大小
+#define CAMERA_QUEUE_DATA_LEN   (1024 * 1024*2)       //单帧图片的缓冲区大小
 
 
 typedef struct _camera_data

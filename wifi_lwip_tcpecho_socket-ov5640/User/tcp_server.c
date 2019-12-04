@@ -120,10 +120,9 @@ void jpeg_socket_close(int* fd)
     *fd = -1;
     close(tempFd);
 }
-extern __align(4) uint8_t queue_buff[CAMERA_QUEUE_NUM][CAMERA_QUEUE_DATA_LEN];
-int send_data=1;
 
 int send_fream=0;
+uint8_t no_used_buff[NO_USED_BUFF_LEN];
 /* TCP server listener thread */
 void tcp_server_thread( void *arg )
 {
@@ -137,19 +136,20 @@ void tcp_server_thread( void *arg )
     int32_t camera_data_len = 0, i = 0;
     uint8_t *in_camera_data = NULL;
     uint8_t packet_index = 0;
-    uint8_t *no_used_buff = NULL;
+    //uint8_t *no_used_buff = NULL;
+		
 
 //    micoWlanGetIPStatus(&para, Station);
 //    tcp_server_log("TCP server ip:%s, port:%d", para.ip, SERVER_PORT);     //打印本地IP和端口
 		PRINTF("本地端口号是%d\n\n",SERVER_PORT);
 	
-	  no_used_buff = pvPortMalloc(NO_USED_BUFF_LEN);
+//	  no_used_buff = pvPortMalloc(NO_USED_BUFF_LEN);
 		memset(no_used_buff, 0, NO_USED_BUFF_LEN);
-		if (no_used_buff == NULL)
-		{
-				PRINTF("No memory\n");
-//				goto __exit;
-		}
+//		if (no_used_buff == NULL)
+//		{
+//				PRINTF("No memory\n");
+////				goto __exit;
+//		}
     sock = socket( AF_INET, SOCK_STREAM, IPPROTO_TCP );
 		if (sock < 0)
 		{
@@ -244,11 +244,11 @@ void tcp_server_thread( void *arg )
         }
     }
 
-// exit:
-//    if( err != kNoErr )
-//    {
-//        tcp_server_log( "Server listerner thread exit with err: %d", err );
-//    }
+ exit:
+    if( err != kNoErr )
+    {
+        tcp_server_log( "Server listerner thread exit with err: %d", err );
+    }
 
     jpeg_socket_close( &sock );	
 		

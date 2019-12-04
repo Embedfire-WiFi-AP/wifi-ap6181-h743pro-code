@@ -1145,7 +1145,7 @@ void HAL_DCMI_FrameEventCallback(DCMI_HandleTypeDef *hdcmi)
 	DCMI_IRQHandler_Funtion();
 
    //重新使能帧中断
-//  __HAL_DCMI_ENABLE_IT(&DCMI_Handle,DCMI_IT_FRAME);
+  __HAL_DCMI_ENABLE_IT(&DCMI_Handle,DCMI_IT_FRAME);
 }
 
 void HAL_DCMI_VsyncEventCallback(DCMI_HandleTypeDef *hdcmi)
@@ -1153,7 +1153,7 @@ void HAL_DCMI_VsyncEventCallback(DCMI_HandleTypeDef *hdcmi)
 		DCMI_IRQHandler_Funtion();
 
 		//重新使能帧中断
-//		__HAL_DCMI_ENABLE_IT(&DCMI_Handle,DCMI_FLAG_VSYNCRI);
+		__HAL_DCMI_ENABLE_IT(&DCMI_Handle,DCMI_FLAG_VSYNCRI);
 }
 
 uint8_t fps=0;
