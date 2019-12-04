@@ -14,7 +14,7 @@
 #include <cm_backtrace.h>
 #include "./i2c/bsp_i2c.h"
 #include "./camera/bsp_ov2640.h"
-#include "./mpu/bsp_mpu.h" 
+#include "./sdram/bsp_sdram.h" 
 /** @endcond */
 #define HARDWARE_VERSION               "V1.0.0"
 #define SOFTWARE_VERSION               "V0.1.0"
@@ -140,6 +140,8 @@ static void BSP_Init(void)
   DEBUG_USART_Config();
 	/* CmBacktrace initialize */
   cm_backtrace_init("Fire_H7", HARDWARE_VERSION, SOFTWARE_VERSION);
+	
+	SDRAM_Init();//初始化外部sdram
 
 
   
