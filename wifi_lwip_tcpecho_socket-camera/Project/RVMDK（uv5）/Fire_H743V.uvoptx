@@ -159,7 +159,7 @@
           <Type>0</Type>
           <LineNumber>1157</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134236752</Address>
+          <Address>134236960</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -169,6 +169,22 @@
           <Filename>E:\閲庣伀鐢靛瓙\WIFI\WIFI__AP6181\base_code_h743_pro\wifi_lwip_tcpecho_socket-camera\Project\User\camera\bsp_ov2640.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\Fire_H7\../../User/camera/bsp_ov2640.c\1157</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>42</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134249904</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\閲庣伀鐢靛瓙\WIFI\WIFI__AP6181\base_code_h743_pro\wifi_lwip_tcpecho_socket-camera\Project\User\appliance.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../User/appliance.c\42</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
