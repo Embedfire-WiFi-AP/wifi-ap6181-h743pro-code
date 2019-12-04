@@ -4,24 +4,8 @@
 #include "wifi_base_config.h"
 #include "stm32h7xx.h"
 #include "stm32h7xx_hal.h"
-
-
-
 uint32_t frame_counter = 0;
-
-uint32_t dcmi_start_counter = 0;
-uint32_t dma_start_counter = 0;
-uint32_t dma_complete_counter = 0;
-
-
-
-uint32_t  XferTransferNumber=0;
-uint32_t 	XferCount = 0;
 uint32_t 	XferSize = 0;
-uint32_t 	pBuffPtr = 0;
-uint8_t 	DCMI_State;
-uint32_t	DMA2_Stream1_State;
-
 
 void DMA_Cmd(DMA_Stream_TypeDef* DMAy_Streamx, FunctionalState NewState)
 {
@@ -160,8 +144,6 @@ void DCMI_Start(void)
 	
 	if (data_p != NULL)	//若缓冲队列未满，开始传输
 	{		
-
-		
 		HAL_DCMI_Stop(&DCMI_Handle) ;
 		/*配置DMA传输*/
 		HAL_DCMI_Start_DMA(&DCMI_Handle, DCMI_MODE_CONTINUOUS, (uint32_t )data_p->head, CAMERA_QUEUE_DATA_LEN);
@@ -171,7 +153,7 @@ void DCMI_Start(void)
 
 }
 
-__IO int testview=0;
+
 void DCMI_Stop(void)
 {	
 	camera_data *data_p;
@@ -182,21 +164,14 @@ void DCMI_Stop(void)
 
 	/*获取正在操作的写指针*/	
 	data_p = cbWriteUsing(&cam_circular_buff);
-	testview++;
+
 	/*计算dma传输的数据个数，用于减少jpeg搜索文件尾的时间*/	
 	if (data_p != NULL)	
 	{
 		data_p->img_dma_len =0; //复位	
 		XferSize = DCMI_Handle.XferSize;//HAL库里面获取 长度
-		if(CAMERA_QUEUE_DATA_LEN>65536*4)	//双dma buff
-		{
+		data_p->img_dma_len = (XferSize - DMA_GetCurrDataCounter(DMA2_Stream1))*4; //最后一个包 __HAL_DMA_GET_COUNTER			
 
-			data_p->img_dma_len = (XferSize - DMA_GetCurrDataCounter(DMA2_Stream1))*4; //最后一个包 __HAL_DMA_GET_COUNTER			
-			if(dma_complete_counter>=2)
-				data_p->img_dma_len += ((dma_complete_counter-1)*XferSize)*4 ;		//	dma_complete_counter个大小为XferSize的包
-		}
-		else	//单dma buf
-			data_p->img_dma_len = (CAMERA_QUEUE_DATA_LEN/4 - DMA_GetCurrDataCounter(DMA2_Stream1))*4;
 	}
 	
 	/*写入缓冲区完毕*/
@@ -208,14 +183,11 @@ void DCMI_Stop(void)
 /*帧中断实现*/
 void DCMI_IRQHandler_Funtion(void)
 {
-	
-	
-	//DCMI_ClearITPendingBit(DCMI_IT_FRAME);
+
 	frame_counter ++;
 	//1.停止DCMI传输
 	DCMI_Stop();
 	//2.根据缓冲区使用情况决定是否开启dma
 	DCMI_Start();
-	dma_complete_counter=0;
 	
 }
