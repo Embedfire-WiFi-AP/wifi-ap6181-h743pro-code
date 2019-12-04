@@ -14,6 +14,7 @@
 #include <cm_backtrace.h>
 #include "./i2c/bsp_i2c.h"
 #include "./camera/bsp_ov2640.h"
+#include "./mpu/bsp_mpu.h" 
 /** @endcond */
 #define HARDWARE_VERSION               "V1.0.0"
 #define SOFTWARE_VERSION               "V0.1.0"
@@ -126,7 +127,6 @@ static void tcpip_init_done( void * arg )
 static void SystemClock_Config(void);
 static void BSP_Init(void)
 {
-
 	
   /* 系统时钟初始化成400MHz */
 	SystemClock_Config();
