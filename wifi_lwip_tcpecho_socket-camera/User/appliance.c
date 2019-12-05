@@ -55,7 +55,7 @@ void app_main( void )//0xD0000000
 	
 		printf("初始化 TCP_server\r\n");
 	
-		host_rtos_create_thread( &wwd_thread, (void *)tcp_server_thread, "TCP_server", NULL,1024*50, 1);
+		host_rtos_create_thread( &wwd_thread, (void *)tcp_server_thread, "TCP_server", NULL,1024*10, 1);
 
 		frame_counter=0;//帧计数器清零
 		send_fream=0;//帧计数器清零
