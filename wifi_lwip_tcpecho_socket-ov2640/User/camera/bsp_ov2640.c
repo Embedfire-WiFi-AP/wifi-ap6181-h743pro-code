@@ -1141,6 +1141,9 @@ const u8 OV2640_JPEG_INIT[][2]=
 
 
 
+
+
+
 /**
   * @brief  初始化控制摄像头使用的GPIO(I2C/DCMI)
   * @param  None
@@ -1266,38 +1269,27 @@ void OV2640_DCMI_Init(void)
 
 	/* DCMI 配置*/
   //DCMI外设寄存器基地址
-//	DCMI_Handle.Instance              = DCMI;    
-//  //连续采集模式
-//	DCMI_Handle.Init.SynchroMode      = DCMI_MODE_CONTINUOUS;
-//  //连续采集模式
-//	DCMI_Handle.Init.SynchroMode      = DCMI_SYNCHRO_HARDWARE;
-//  //像素时钟上升沿有效
-//	DCMI_Handle.Init.PCKPolarity      = DCMI_PCKPOLARITY_RISING;
-//  //VSP低电平有效
-//	DCMI_Handle.Init.VSPolarity       = DCMI_VSPOLARITY_LOW;
-//  //HSP低电平有效  
-//	DCMI_Handle.Init.HSPolarity       = DCMI_HSPOLARITY_LOW;
-//  //全采集
-//	DCMI_Handle.Init.CaptureRate      = DCMI_CR_ALL_FRAME;
-//  //8位数据宽度
-//	DCMI_Handle.Init.ExtendedDataMode = DCMI_EXTEND_DATA_8B;
-//	HAL_DCMI_Init(&DCMI_Handle); 	
+	DCMI_Handle.Instance              = DCMI;    
+  //连续采集模式
+	DCMI_Handle.Init.SynchroMode      = DCMI_MODE_CONTINUOUS;
+  //连续采集模式
+	DCMI_Handle.Init.SynchroMode      = DCMI_SYNCHRO_HARDWARE;
+  //像素时钟上升沿有效
+	DCMI_Handle.Init.PCKPolarity      = DCMI_PCKPOLARITY_RISING;
+  //VSP低电平有效
+	DCMI_Handle.Init.VSPolarity       = DCMI_VSPOLARITY_LOW;
+  //HSP低电平有效  
+	DCMI_Handle.Init.HSPolarity       = DCMI_HSPOLARITY_LOW;
+  //全采集
+	DCMI_Handle.Init.CaptureRate      = DCMI_CR_ALL_FRAME;
+  //8位数据宽度
+	DCMI_Handle.Init.ExtendedDataMode = DCMI_EXTEND_DATA_8B;
+	HAL_DCMI_Init(&DCMI_Handle); 	
 
 	/* 配置中断 */
 	HAL_NVIC_SetPriority(DCMI_IRQn, 0 ,5);
 	HAL_NVIC_EnableIRQ(DCMI_IRQn); 	
 	
-	  DCMI_Handle.Instance=DCMI;
-    DCMI_Handle.Init.SynchroMode=DCMI_SYNCHRO_HARDWARE;    //硬件同步HSYNC,VSYNC
-    DCMI_Handle.Init.PCKPolarity=DCMI_PCKPOLARITY_RISING;  //PCLK 上升沿有效
-    DCMI_Handle.Init.VSPolarity=DCMI_VSPOLARITY_LOW;       //VSYNC 低电平有效
-    DCMI_Handle.Init.HSPolarity=DCMI_HSPOLARITY_LOW;       //HSYNC 低电平有效
-    DCMI_Handle.Init.CaptureRate=DCMI_CR_ALL_FRAME;        //全帧捕获
-    DCMI_Handle.Init.ExtendedDataMode=DCMI_EXTEND_DATA_8B; //8位数据格式 
-    HAL_DCMI_Init(&DCMI_Handle);                           //初始化DCMI，此函数会开启帧中断  
-
-	HAL_NVIC_SetPriority(DCMI_IRQn, 0 ,5);
-	HAL_NVIC_EnableIRQ(DCMI_IRQn); 	
 	
 }
 

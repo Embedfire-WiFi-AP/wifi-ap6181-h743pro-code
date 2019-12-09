@@ -135,7 +135,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>CMSIS_AGDI</Key>
-          <Name>-X"Fire CMSIS-DAP" -UHS-00005956 -O206 -S8 -C0 -P00 -N00("ARM CoreSight SW-DP") -D00(6BA02477) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC8000 -FN1 -FF0STM32H7x_2048.FLM -FS08000000 -FL0200000 -FP0($$Device:STM32H743XIHx$CMSIS\Flash\STM32H7x_2048.FLM)</Name>
+          <Name>-X"Fire CMSIS-DAP" -UHS-00001111 -O206 -S8 -C0 -P00 -N00("ARM CoreSight SW-DP") -D00(6BA02477) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC8000 -FN1 -FF0STM32H7x_2048.FLM -FS08000000 -FL0200000 -FP0($$Device:STM32H743XIHx$CMSIS\Flash\STM32H7x_2048.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -157,34 +157,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>40</LineNumber>
+          <LineNumber>143</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\User\camera_data_queue.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>1157</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134236752</Address>
+          <Address>134221114</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>E:\閲庣伀鐢靛瓙\WIFI\WIFI__AP6181\base_code_h743_pro\wifi_lwip_tcpecho_socket-camera\Project\User\camera\bsp_ov2640.c</Filename>
+          <Filename>E:\閲庣伀鐢靛瓙\WIFI\WIFI__AP6181\base_code_h743_pro\wifi_lwip_tcpecho_socket-ov5640\Project\User\cammera_middleware.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../User/camera/bsp_ov2640.c\1157</Expression>
+          <Expression>\\Fire_H7\../../User/cammera_middleware.c\143</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>145</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134221122</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\閲庣伀鐢靛瓙\WIFI\WIFI__AP6181\base_code_h743_pro\wifi_lwip_tcpecho_socket-ov5640\Project\User\cammera_middleware.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../User/cammera_middleware.c\145</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -197,6 +197,16 @@
           <count>1</count>
           <WinNumber>1</WinNumber>
           <ItemText>i,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>data_p</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>queue_buff</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
